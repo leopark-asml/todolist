@@ -1,0 +1,22 @@
+// Firebase 설정 및 초기화
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// 🔽 여기에 본인의 Firebase 설정 정보로 교체하세요
+const firebaseConfig = {
+  apiKey: "AIzaSyAPUj8U7_RFdjMlwvdqSYbYPV-MsbSx8-U",
+  authDomain: "src-todolist.firebaseapp.com",
+  projectId: "src-todolist",
+  storageBucket: "src-todolist.firebasestorage.app",
+  messagingSenderId: "141706123147",
+  appId: "1:141706123147:web:7825e62d783514d576c18e",
+  measurementId: "G-QJMGNJ2YNN"
+};
+
+// Firebase 초기화
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+export { auth, db };

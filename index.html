@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRC TODO List</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+  <div id="auth-section">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Email" required><br>
+      <input type="password" id="login-password" placeholder="Password" required><br>
+      <button id="login-btn">Login</button>
+    </form>
+    <h2>Register</h2>
+    <form id="signup-form">
+      <input type="email" id="register-email" placeholder="Email" required><br>
+      <input type="password" id="register-password" placeholder="Password" required><br>
+      <button id="register-btn">Register</button>
+    </form>
+  </div>
+
+  <div id="app-section" style="display:none;">
+    <h2>TODO List</h2>
+
+    <div id="admin-section" style="display:none;">
+      <h3>Pending Approvals</h3>
+      <ul id="approval-list"></ul>
+      <h3>All TODOs</h3>
+      <ul id="all-todos"></ul>
+    </div>
+
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Enter a task" required>
+      <button id="add-todo-btn">Add</button>
+    </form>
+    <ul id="todo-list"></ul>
+    <button id="logout-btn">Logout</button>
+  </div>
+</body>
+</html>
